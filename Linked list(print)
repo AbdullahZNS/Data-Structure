@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+struct Node
+{
+ int data;
+ Node* next;
+};
+
+Node* head;
+void print()
+{
+
+Node* ptr = head;
+while(ptr != 0)
+{
+cout << ptr -> data << endl;
+ptr = ptr -> next;
+
+}   
+
+}
+
+
+int main() {
+   
+Node a,b,c,d;
+
+a.data = 5;
+b.data = 3;
+c.data = 7;
+d.data = 1;
+
+a.next = &b;
+b.next = &c;
+c.next = &d;
+d.next = 0;
+
+ head = &a;
+
+
+print();
+
+
+    return 0;
+}
